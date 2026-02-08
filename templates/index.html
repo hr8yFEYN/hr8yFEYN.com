@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}hr8yFEYN{% endblock %}
+
+{% block content %}
+
+<h1>新しい記事</h1>
+
+{% set posts = get_section(path="posts/_index.md") %}
+<ul class="page_list">
+    {% for page in posts.pages | slice(end=10) %}
+      <li>
+          <span class="date">{{ page.date | date(format="%Y-%m-%d") }}</span><br>
+          <span class="title"><a href="{{ page.permalink | safe }}">{{ page.title }}</a></span><br>
+          <p>
+          {% if page.extra.key_image %}
+          <img src="{{ page.extra.key_image }}" alt="{{ page.title  }}">
+          {% endif %}
+          {{ page.content | striptags | truncate(length=140, end="...") }} <a href="{{ page.permalink }}">続きを読む</a>
+          </p>
+      </li>
+    {% endfor %}
+</ul>
+
+<nav style="text-align: center;padding-bottom: 1.5em">
+    <a href="/posts/page/2">全ての記事へ</a>
+</nav>
+
+{% endblock content %}

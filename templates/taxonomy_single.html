@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block title %}{{ term.name }}{% endblock %}
+
+{% block content %}
+<h1 class="title">
+  {{ term.name }}
+</h1>
+<ul class="page_list">
+  <!-- If you are using pagination, section.pages will be empty.
+       You need to use the paginator object -->  
+  {% for page in paginator.pages %}
+  <li>
+      <span class="date">{{ page.date | date(format="%Y-%m-%d") }}</span><br>
+      <span class="title"><a href="{{ page.permalink | safe }}">{{ page.title }}</a></span><br>
+      <p>
+    {% if page.extra.key_image %}
+      <img src="{{ page.extra.key_image }}" alt="{{ page.title  }}">
+    {% endif %}
+    {{ page.content | striptags | truncate(length=140, end="...") }} <a href="{{ page.permalink }}">続きを読む</a>
+      </p>
+  </li>
+  {% endfor %}
+
+
+{% if paginator.previous or paginator.next %}
+    <nav class="pagination">
+    {% if paginator.previous %}
+        <a href="{{ paginator.first }}">&lt;&lt;</a>
+        <a href="{{ paginator.previous }}">新しい記事</a>
+    {% else %}
+        <span class="" style="color:#ccc">&lt;&lt; 新しい記事</span>
+    {% endif %}
+    <span class="sepbar">|</span>
+
+
+    <span class="current-page">{{ paginator.current_index }} / {{ paginator.number_pagers }}</span>
+
+    <span class="sepbar">|</span>
+    {% if paginator.next %}
+        <a href="{{ paginator.next }}">古い記事</a>
+        <a href="{{ paginator.last }}">&gt;&gt;</a>
+    {% else %}
+        <span class="" style="color:#ccc">古い記事 &gt;&gt;</span>
+    {% endif %}
+    </nav>
+{% endif %}
+
+</ul>
+{% endblock content %}

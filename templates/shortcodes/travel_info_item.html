@@ -1,0 +1,26 @@
+{% if img %}
+<div class="travel_info_item_with_image">
+
+<div class="image">
+{% if link %}
+<a href="{{ link }}"><img src="{{ img }}" {% if alt %}alt="{{ alt }}"{% endif %}></a>
+{% else %}
+<a href="{{ img }}"><img src="{{ img }}"></a>
+{% endif %}
+</div>
+<div class="body">
+  {{ body | safe }}
+</div>
+
+</div>
+
+
+{% else %}
+
+<div class="travel_info_item">
+<div class="body">
+{{ body | safe }}
+</div>
+</div>
+
+{% endif %}
