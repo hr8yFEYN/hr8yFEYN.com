@@ -1,15 +1,15 @@
 ---
 title: ベアス川でボウズ回避の釣り旅行
-date: '2025-06-11T18:43:11+09:00'
-draft: true
-show_key_image: https://photos.hr8yfeyn.com/Iran_Travel-800.jpg
+date: '2025-11-11T18:43:11+09:00'
+draft: false
 taxonomies:
   tags:
   - 旅行
   - 徒歩旅行
   - インド
 extra:
-  key_image: https://photos.hr8yfeyn.com/Iran_Travel-320.jpg
+  key_image: /photos/Fishing_Beas_River-01_240.jpg
+  show_key_image: /photos/Fishing_Beas_River-01_800.jpg
   toc: true
 ---
 
