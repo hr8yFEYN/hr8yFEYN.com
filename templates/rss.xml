@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+    <channel>
+        <title>{{ config.title }}</title>
+        <link>{{ config.base_url }}</link>
+        <description>{{ config.description | default(value="") }}</description>
+        <language>{{ lang }}</language>
+        <lastBuildDate>{{ last_updated }}</lastBuildDate>
+        
+        {% for page in pages %}
+        <item>
+            <title>{{ page.title }}</title>
+            <link>{{ config.base_url ~ page.path }}</link>
+            <guid isPermaLink="true">{{ config.base_url ~ page.path }}</guid>
+            <pubDate>{{ page.date }}</pubDate>
+            
+            {# 記事の全文（HTML）をそのまま含める場合 #}
+            <content:encoded><![CDATA[{{ page.content | safe }}]]></content:encoded>
+        </item>
+        {% endfor %}
+    </channel>
+</rss>
