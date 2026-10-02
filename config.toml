@@ -1,6 +1,8 @@
 # The URL the site will be built for
 base_url = "https://hr8yFEYN.com"
 
+author = "hr8yFEYN"
+
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = true
 
@@ -12,6 +14,10 @@ default_language = "ja"
 taxonomies = [
     { name = "tags", paginate_by = 20 }
 ]
+
+generate_feeds = true
+
+feed_filenames = ["rss.xml", "atom.xml"]
 
 [slugify]
 paths = "safe"
