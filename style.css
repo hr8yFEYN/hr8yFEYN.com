@@ -1,0 +1,409 @@
+html {
+  background-color: #fefefe;
+}
+body {
+  /*font-family: Helvetica Neue, Helvetica, ヒラギノ角ゴ Pro W3, Hiragino Kaku Gothic Pro, メイリオ, Meiryo, ＭＳ\ Ｐゴシック, MS PGothic, sans-serif;*/
+  /*font-family: "Hiragino Mincho ProN","Hiragino Mincho Pro",HGSMinchoE,"Yu Mincho",YuMincho,"MS PMincho",serif;*/
+  font-family: "Helvetica Neue","Hiragino Sans","Hiragino Kaku Gothic ProN",Arial,"Noto Sans JP",Meiryo,sans-serif;
+  background:transparent;
+  color:black;
+  -webkit-font-smoothing: antialiased;
+}
+header {
+  padding: 0.5em 0;
+  margin-bottom: 1em;
+  display: grid;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+  clear: both;
+  color: black;
+  margin: 1em 0 0.6em 0;
+}
+h1 {
+  font-size: 200%;
+}
+h1.entry-title {
+  font-size: 230%;
+  margin: 0;
+}
+h2 {
+  font-size: 160%;
+}
+h3  {
+  font-size: 140%;
+}
+h4 {
+  font-size: 125%;
+}
+h5 {
+  font-size: 110%;
+}
+h6 {
+  font-size: 105%;
+}
+p {
+  margin: 0.5em 0 0.5em 0;
+}
+img {
+  margin: 0 0 0.8 0;
+}
+blockquote {
+  margin: 2em 0;
+  padding: 1em 4em 1em 1em;
+  border-left: solid 5px rgb(230,230,230);
+}
+hr {
+  margin-top: 2.2em;
+  margin-bottom: 1.7em;
+  margin-left: 25%;
+  margin-right: 25%;
+}
+a:link {
+  color: rgb(0,128,255);
+  text-decoration: none;
+}
+img.left {
+  margin-right: 0.7em;
+  float: left;
+}
+hr.section {
+  margin-top: 4em;
+  margin-bottom: 2em;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+.clearfix:before, .clearfix:after {
+  content:"";
+  display:table
+}
+.clearfix:after { clear: both }
+.clearfix { zoom:1 }
+.sepbar {
+    color: rgb(220,220,220)
+}
+#site_menu {
+  /* color: rgb(224,224,224); */
+  color: black;
+  text-align: center;
+  vertical-align: center;
+  font-size: 85%;
+}
+#site_menu a:link {
+  /* color: rgb(224,224,224); */
+  color: black;
+}
+#site_menu a:visited {
+  color: black;
+}
+#site_menu a:active {
+  color: rgb(0,128,255);
+}
+#site_menu a:hover {
+  color: rgb(0,128,255);
+}
+#key_image img {
+  width: 100%;
+}
+.entry-header {
+  margin-top: 2em 0 0 0;
+  padding: 0;
+}
+.entry-header span.entry-date {
+  color: gray;
+  font-weight: bold;
+  font-size: 120%;
+
+}
+.entry-header h1.entry-title {
+  font-weight: bold;
+}
+.entry-content {
+  margin-bottom: 1.5em;
+}
+.entry-content p {
+  line-height: 1.6;
+  margin-bottom: 1.5em;
+}
+.entry-content img {
+  width: 100%;
+  background-color: rgb(250,250,250);
+  border-radius: 0.5%;
+}
+
+.entry-content table tbody, tr, th, td {
+    border: solid 1px gray;
+}
+.entry-content table {
+  margin-left: 2em;
+  border-collapse: collapse;
+}
+.entry-content table tbody tr th {
+  padding: 0.25em 0.5em;
+  background-color: rgb(225,225,225);
+}
+.entry-content table tbody tr td {
+  padding: 0.25em 0.5em;
+  background-color: rgb(245,245,245);
+}
+footer {
+  text-align: center;
+  margin-bottom: 2em;
+}
+ul.page_list {
+  padding-left: 0.1em;
+  margin-top: 2em;
+  list-style-type: none;
+}
+ul.page_list li {
+  margin-bottom: 2em;
+}
+ul.page_list li::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+ul.page_list .date {
+  color: gray;
+  font-size: 85%;
+  font-weight: bold
+}
+ul.page_list .title {
+  font-weight: bold;
+  font-size: 110%;
+}
+ul.page_list li p {
+  margin: 0;
+  font-size: 90%;
+}
+nav.pagination {
+  text-align: center;
+  margin-bottom: 1.5em;
+  color: black;
+  font-size: 90%;
+}
+nav.pagination .date {
+    font-size:90%;
+    color: gray;
+    font-weight: bold;
+}
+div.addr a:link {
+  color:#999;
+  font-size: 80%;
+}
+aside.toc {
+  margin-top: 0.5em;
+  margin-bottom: 1em;
+  background-color: rgb(245,245,245);
+  border: 1px solid rgb(230,230,230);
+  border-radius: 0.5em;
+
+  h2 {
+      margin: 0;
+      padding: 0.5em;
+  }
+
+  ul {
+      margin-top: 0;
+      padding: 0.2em 2em 0em 2em;
+      list-style-type: disc;
+  }
+
+}
+
+@media only screen and (min-width: 740px) {
+  body {
+    font-size: 18px;
+    width: 740px;
+    margin: 0 auto 1em auto;
+  }
+  .travel_info_item_with_image {
+    display: grid;
+    grid-template-columns: 170px 1fr;
+  }
+  .travel_info_item_with_image .image {
+    grid-row: 1 / 2;
+    grid-column: 1 / 2
+  }
+  .travel_info_item_with_image .image img {
+    width: 160px;
+  }
+  .travel_info_item_with_image .body {
+    grid-row: 1 / 2;
+    grid-column: 2 / 3
+  }
+  .travel_info_item_with_image .body p {
+    margin-top: 0;
+    padding-top: 0;
+  }
+  ul.page_list li p img {
+    float: left;
+    width: 200px;
+    height: 140px;
+    margin-right: 0.7em;
+    border-radius: 2%;
+    background-color: rgb(245,245,245);
+  }
+  .google_maps {
+    width: 500px;
+    height: 350px;
+  }
+}
+@media only screen and (max-width: 739px) {
+  body {
+    font-size: 18px;
+    width: 100%;
+    margin: 0 auto 1em auto;
+  }
+  article {
+    width: 92%;
+    margin: 0 auto 1em auto;
+  }
+  nav {
+    width: 92%;
+    margin: 0 auto 1em auto;
+  }
+  #site_menu {
+      width: 92%;
+  }
+  .travel_info_item_with_image .image img {
+    width: 100%;
+  }
+  .travel_info_item_with_image .body p {
+    margin-top: 0;
+    padding-top: 0;
+  }
+  h1 {
+    font-size: 170%;
+  }
+  h1.entry-title {
+    font-size: 190%;
+  }
+  h2 {
+    font-size: 160%;
+  }
+  h3  {
+    font-size: 140%;
+  }
+  h4 {
+    font-size: 120%;
+  }
+  h5 {
+    font-size: 110%;
+  }
+  h6 {
+    font-size: 105%;
+  }
+  ul.page_list li p img {
+    width: 100%;
+    border-radius: 1%;
+    margin-bottom: 1em;
+  }
+  ul.page_list li p {
+    font-size: 100%;
+  }
+  ul.page_list .title {
+    font-weight: bold;
+    font-size: 120%;
+  }
+  .google_maps {
+    width: 100%;
+    height: 300px;
+  }
+}
+
+.youtubeVideo {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  padding-top: 25px;
+  height: 0;
+}
+.youtubeVideo iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.youtubeVideo + * {
+    margin-top: 2em;
+}
+.photos {
+    width: 95%;
+    text-align: center;
+}
+
+.photos img {
+    width: 17%;
+    margin: 0.1em;
+}
+
+@media (prefers-color-scheme: dark) {
+    html {
+        background-color: #000;
+    }
+
+    body {
+        background-color: #000;
+        color: #eee;
+    }
+    a:link {
+        color: rgb(20,158,255);
+    }
+    a:active {
+        color: rgb(20,158,255);
+    }
+    a:hover {
+        color: rgb(20,158,255);
+        text-decoration: underline;
+    }
+    a:visited {
+        color: rgb(0,120,210);
+    }
+    h1, h2, h3, h4, h5, h6 {
+        color: #eee;
+    }
+    .sepbar {
+        color: rgb(30,30,30)
+    }
+    #site_menu {
+        color: #fff;
+    }
+    #site_menu a:link {
+        color: #fff;
+    }
+    #site_menu a:visited {
+        color: #fff;
+    }
+    #site_menu a:active {
+        color: rgb(20,158,255);
+    }
+    #site_menu a:hover {
+        color: rgb(20,158,255);
+    }
+    #TableOfContents {
+      background-color: rgb(50,50,50);
+      border: 1px solid rgb(90,90,90);
+    }
+    .entry-header span.entry-date {
+        color: gray;
+    }
+    .entry-content table tbody tr th {
+      background-color: rgb(60,60,60);
+    }
+    .entry-content table tbody tr td {
+      background-color: rgb(30,30,30);
+    }
+    ul.page_list .date {
+        color: gray;
+    }
+    nav.pagination {
+        color: #eee;;
+    }
+    nav.pagination .date {
+        color: gray;
+    }
+    div.addr a:link {
+        color:#999;
+    }
+}
